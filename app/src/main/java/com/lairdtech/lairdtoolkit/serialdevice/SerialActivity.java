@@ -17,12 +17,18 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ScrollView;
+import android.widget.Switch;
 import android.widget.TextView;
+import android.widget.TimePicker;
+import android.widget.ToggleButton;
 
 import com.lairdtech.lairdtoolkit.R;
 import com.lairdtech.lairdtoolkit.bases.BaseActivity;
+
+import org.apache.http.impl.cookie.DateParseException;
 
 public class SerialActivity extends BaseActivity implements SerialManagerUiCallback{
 
@@ -37,6 +43,15 @@ public class SerialActivity extends BaseActivity implements SerialManagerUiCallb
 
 	private boolean isPrefClearTextAfterSending = false;
 
+	private EditText imeiInput;
+	private EditText zipcardInput;
+	private DatePicker resStartDateInput;
+	private TimePicker resStartTimeInput;
+	private DatePicker resEndDateInput;
+	private TimePicker resEndTimeInput;
+	private Switch lockOpToggle;
+
+
 
 	@Override
 	protected void onCreate(final Bundle savedInstanceState) {
@@ -49,7 +64,16 @@ public class SerialActivity extends BaseActivity implements SerialManagerUiCallb
 		initialiseDialogAbout(getResources().getString(R.string.about_serial));
 		initialiseDialogFoundDevices("VSP");
 
+		imeiInput = (EditText) findViewById(R.id.imeiInput_view);
+		zipcardInput = (EditText) findViewById(R.id.zipcardInput_view);
+		resStartDateInput = (DatePicker) findViewById(R.id.resStartDateInput_view);
+		resStartTimeInput = (TimePicker) findViewById(R.id.resStartTimeInput_view);
+		resEndDateInput = (DatePicker) findViewById(R.id.resEndDateInput_view);
+		resEndTimeInput = (TimePicker) findViewById(R.id.resEndTimeInput_view);
+		lockOpToggle = (Switch) findViewById(R.id.lockOpToggle_switch);
+
 	}
+
 
 	/*
 	 * *************************************
