@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lint>
+    <issue id="ClickableViewAccessibility">
+        <ignore path="src/com/lairdtech/lairdtoolkit/HomeActivity.java" />
+    </issue>
+    <issue id="InflateParams">
+        <ignore path="src/com/lairdtech/lairdtoolkit/AppsHolder.java" />
+        <ignore path="src/com/lairdtech/lairdtoolkit/BaseActivity.java" />
+        <ignore path="src/com/lairdtech/lairdtoolkit/HomeActivity.java" />
+        <ignore path="src/com/lairdtech/lairdtoolkit/bases/BaseActivity.java" />
+    </issue>
+</lint>

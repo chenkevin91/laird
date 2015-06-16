@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+Copyright (c) 2014 Laird Technologies. All Rights Reserved.
+  
+The information contained herein is property of Laird Technologies.
+Licensees are granted free, non-transferable use of the information. NO WARRANTY of ANY KIND is provided. 
+This heading must NOT be removed from the file.
+-->
+
+<resources>
+
+    <string name="app_name">Laird Toolkit</string>
+    <string name="version_number">Version 4.18.1.1</string>
+    
+    <!-- screens titles -->
+    <string name="title_activity_settings">Settings</string>
+    <string name="title_activity_thermometer">Health Thermometer Device</string>
+    <string name="title_activity_proximity">Proximity Device</string>
+    <string name="title_activity_heart_rate">Heart Rate Device</string>
+    <string name="title_activity_blood_pressure">Blood Pressure Device</string>
+    <string name="title_activity_serial">Serial</string>
+    <string name="title_activity_ota">OTA</string>
+    <string name="title_activity_batch">Batch</string>
+    
+    <!-- General -->
+    <string name="btn_scan">Scan</string>
+    <string name="btn_connecting">Connecting..</string>
+    <string name="btn_disconnect">Disconnect</string>
+    <string name="label_valid_device_tv">VSP Service Found:</string>
+    
+    <!-- General Settings -->
+    <string name="action_about">About</string>
+    <string name="action_settings">Settings</string>
+    <string name="pref_general">General</string>
+    <string name="pref_run_in_background">Run In Background</string>
+    <string name="pref_periodical_scan">Periodical Scan</string>
+    
+    <!-- content descriptions -->
+    <string name="descr_content_general">image</string>
+    
+    <!-- device details -->
+    <string name="device_details">Device Details</string>
+    <string name="name">Name: </string>
+    <string name="address">Address: </string>
+    <string name="RSSI">RSSI: </string>
+    <string name="battery">Battery: </string>
+    
+    <!-- Home Activity -->
+    <string name="disclaimer_text">Embedded Wireless Solutions from Laird Technologies include 
+        Wi-Fi®, BLuetooth® / Bluetooth Low Energy, and RAMP (Range-Amplified Multipoint) radio modules designed to provide secure, reliable connectivity for business critical mobile devices. 
+        Full details are available at
+        &lt;a href="http://www.lairdtech.com/Products/Embedded-Wireless-Solutions/#.U_3edPldVMU">www.lairdtech.com/wireless&lt;/a>
+        \n\n
+        This application is for evaluation purposes only and no representation or warranty is given nor is any to be implied
+    </string>
+    
+    <!-- heart rate -->
+    <string name="label_heart">HRM</string>
+    <string name="heartRateTV">Heart Rate Device</string>
+    <string name="HeartRateValue">-</string>
+    <string name="about_heart_rate">\nScan and connect to a Laird BLE device running a Heart rate monitor SMARTbasic app.
+        							\n\nOnce connected the sensor data and position will be displayed and plotted on the graph.  </string>
+    
+    <!-- Thermometer -->
+    <string name="label_thermometer">HTM</string>
+    <string name="ThermometerValue">-</string>
+    <string name="body_sensor">Sensor:</string>
+    <string name="about_thermometer">\nScan and connect to a Laird BLE device running a Health thermometer SMARTbasic app.
+        							\n\nOnce connected the sensor data will be displayed and plotted on the graph.   </string>
+
+    <!-- blood pressure -->
+    <string name="label_blood">BPM</string>
+    <string name="systolic">Systolic:   </string>
+    <string name="diastolic">Diastolic:   </string>
+    <string name="arterial_pressure">Arterial Pressure:   </string>
+    <string name="about_blood_pressure">\nScan and connect to a Laird BLE device running a Blood pressure monitor SMARTbasic app.
+        							\n\nOnce connected the sensor data will be displayed and plotted on the graph.  </string>
+    
+    <!-- proximity -->
+    <string name="label_prox">Proximity</string>
+    <string name="tx_power">Tx Power: </string>
+    <string name="link_loss_alert">Link Loss Alert</string>
+    <string name="immediate_alert">Immediate Alert</string>
+    <string name="alert_me"> Alert Me </string>
+    <string name="off">OFF</string>
+    <string name="low">LOW</string>
+    <string name="high">HIGH</string>
+    <string name="about_proximity">\nScan and connect to a Laird BLE device running a Proximity SMARTbasic app.
+        							\n\nOnce connected the you can change the Link loss and Immmediate alert characteristics.  </string>
+    
+    <!-- serial -->
+    <string name="label_serial">Serial</string>
+    <string name="pref_serial">Serial</string>
+    
+    <string name="action_clear">Clear</string>
+    <string name="console">Console</string>
+    <string name="btn_send">Send</string>
+    <string name="label_rx">Rx:</string>
+    <string name="label_tx">Tx:</string>
+    <string name="pref_clear_text_after_sending">Clear text after sending</string>
+    <string name="about_serial">The serial functionality allows text data to be sent from an Android
+        device to a Laird BLE module that is in VSP mode and back again.
+        This application can be used to remotely control the device through the use of AT commands.
+	</string>
+    
+    <!-- OTA -->
+    <string name="label_ota">OTA</string>
+    <string name="pref_OTA">OTA</string>
+
+    <string name="btn_ota_select">Select Download File</string>
+    <string name="btn_upload">Download</string>
+    <string name="btn_stop">Stop</string>
+    
+    <string name="label_filename_tv">File Name:</string>
+    <string name="label_saved_as_tv">Saved As:</string>
+    <string name="label_status_tv">App Status:</string>
+    <string name="label_errors_tv">Errors:</string>
+	<string name="pref_reset_module_after_sending">Module reset</string>
+    
+    <string name="value_status_waiting">Waiting</string>
+    <string name="value_status_uploading">Uploading!!</string>
+    <string name="value_status_success">Success</string>
+    <string name="value_status_failed">Failed</string>
+    <string name="value_status_stopped">Stopped</string>
+    <string name="about_ota">
+        Program Laird BLE modules remotely with this new Over the Air (OTA) application.
+        Remove the cables by wirelessly programming the Laird BLE module,
+        Bluetooth Low Energy module with the new smartBASIC programming language.
+        &lt;br/> &lt;br/>
+        &lt;b>Note:&lt;/b> The module needs to be in VSP command mode to work.
+	</string>
+    
+    <!-- Batch -->
+    <string name="label_batch">Batch</string>
+    <string name="valueStatusDownloading">Sending!!</string>
+    <string name="btn_batch_select">Select File To Read</string>
+    <string name="non_applicable">N/A</string>
+    <string name="no_single_data_found">-</string>
+    <string name="about_batch">
+        The Batch functionality enables you to send scripts wirelessly over the air to the Laird BLE module.
+        These scripts can be custom-made and use AT commands to control the module remotely.
+        &lt;br/> &lt;br/>
+        &lt;b>Note:&lt;/b> The module needs to be in VSP command mode to work.
+    </string>
+    
+    
+    
+</resources>

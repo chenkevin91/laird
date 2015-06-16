@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+Copyright (c) 2014 Laird Technologies. All Rights Reserved.
+  
+The information contained herein is property of Laird Technologies.
+Licensees are granted free, non-transferable use of the information. NO WARRANTY of ANY KIND is provided. 
+This heading must NOT be removed from the file.
+-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/customParentLayout"
+    android:background="#E8E8E8"
+    android:orientation="vertical" >
+
+        <include
+        android:id="@+id/includeButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/item_scan_button" />
+
+
+    <TextView
+        android:id="@+id/labelVspOutTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="#E8E8E8"
+        android:text="@string/console"
+        android:textColor="#000000"
+        android:textSize="20sp" />
+
+    <ScrollView
+        android:id="@+id/scrollViewVspOut"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/border" >
+
+        <TextView
+            android:id="@+id/valueVspOutTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:textIsSelectable="true"
+            android:textSize="20sp" />
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/containerVspIn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:id="@+id/valueVspInputEt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:inputType="text" />
+
+        <Button
+            android:id="@+id/btnSend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:onClick="btnSend"
+            android:text="@string/btn_send"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/containerCounters"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/labelRxCounterTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="@string/label_rx"
+            android:textColor="#00a0df"/>
+
+        <TextView
+            android:id="@+id/valueRxCounterTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/labelRxCounterTv"
+            android:text="@string/non_applicable"
+            android:textColor="#00a0df"/>
+
+        <TextView
+            android:id="@+id/labelTxCounterTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/valueRxCounterTv"
+            android:text="@string/label_tx"
+            android:textColor="#00a0df"/>
+
+        <TextView
+            android:id="@+id/valueTxCounterTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/labelTxCounterTv"
+            android:text="@string/non_applicable"
+            android:textColor="#00a0df"/>
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/kchen/StudioProjects/Laird_Toolkit_v4.18.1.1-Source_Code/app/libs/achartengine-1.1.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="9932e3fb9fbe54e80873e77f72a99f79e33b3250">
+        <dex dex="/Users/kchen/StudioProjects/Laird_Toolkit_v4.18.1.1-Source_Code/app/build/intermediates/pre-dexed/debug/achartengine-1.1.0-8d6bbef2dda4d09a7193aad29cf1ed12827c886a.jar" />
+    </item>
+    <item
+        jar="/Users/kchen/Library/Android/sdk/extras/android/m2repository/com/android/support/support-v4/19.1.0/support-v4-19.1.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="85f201b380937e61a9dce6ca90ccf6872abbfb67">
+        <dex dex="/Users/kchen/StudioProjects/Laird_Toolkit_v4.18.1.1-Source_Code/app/build/intermediates/pre-dexed/debug/support-v4-19.1.0-af7818938a98e3e9994d7208000cb561ae032c41.jar" />
+    </item>
+    <item
+        jar="/Users/kchen/StudioProjects/Laird_Toolkit_v4.18.1.1-Source_Code/app/libs/laird_library_ver.0.18.1.1.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="8a2a992d00a3cb74164d91dc62babd66cb638d5f">
+        <dex dex="/Users/kchen/StudioProjects/Laird_Toolkit_v4.18.1.1-Source_Code/app/build/intermediates/pre-dexed/debug/laird_library_ver.0.18.1.1-54fd960aebce20cab2c46e5ee3b4dc000841d0e7.jar" />
+    </item>
+    <item
+        jar="/Users/kchen/StudioProjects/Laird_Toolkit_v4.18.1.1-Source_Code/app/libs/commons-lang3-3.3.1.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="63de8a49b95145202032b00e964efb2b6c61ac79">
+        <dex dex="/Users/kchen/StudioProjects/Laird_Toolkit_v4.18.1.1-Source_Code/app/build/intermediates/pre-dexed/debug/commons-lang3-3.3.1-c26c43715e5d70d0d663e80b5ebb1ef92ed70385.jar" />
+    </item>
+
+</items>

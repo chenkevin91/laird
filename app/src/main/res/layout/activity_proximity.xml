@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+Copyright (c) 2014 Laird Technologies. All Rights Reserved.
+  
+The information contained herein is property of Laird Technologies.
+Licensees are granted free, non-transferable use of the information. NO WARRANTY of ANY KIND is provided. 
+This heading must NOT be removed from the file.
+-->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin">
+
+    <include
+        android:id="@+id/includeButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        layout="@layout/item_scan_button" />
+
+
+    <include
+        android:id="@+id/include1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        layout="@layout/common_connected_device_details" />
+
+    <RelativeLayout
+        android:id="@+id/containerRadioButtons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/include1"
+        android:layout_below="@+id/include1"
+        android:background="@drawable/border"
+        android:layout_marginTop="5dp" >
+
+        <RelativeLayout
+            android:id="@+id/containerLinkLossAlert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true" >
+
+            <TextView
+                android:id="@+id/textLinkLossAlert"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/link_loss_alert"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:id="@+id/radioGroupLinkLoss"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textLinkLossAlert" >
+
+                <RadioButton
+                    android:id="@+id/radioLinkLossAlertLow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/off" />
+
+                <RadioButton
+                    android:id="@+id/radioLinkLossAlertMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/low" />
+
+                <RadioButton
+                    android:id="@+id/radioLinkLossAlertHigh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/high" />
+            </RadioGroup>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/containerImmediateAlert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true" >
+
+            <TextView
+                android:id="@+id/textImmediateAlert"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/immediate_alert"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:id="@+id/radioGroupImmediateAlert"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textImmediateAlert" >
+
+                <RadioButton
+                    android:id="@+id/radioImmediateAlertLow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/off" />
+
+                <RadioButton
+                    android:id="@+id/radioImmediateAlertMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/low" />
+
+                <RadioButton
+                    android:id="@+id/radioImmediateAlertHigh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/high" />
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/btnImmediateAlert"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/radioGroupImmediateAlert"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/blue_button"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="@string/alert_me" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/containerTxPower"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/includeButton"
+        android:layout_alignLeft="@+id/includeButton"
+        android:background="@drawable/border"
+        android:gravity="center" >
+
+        <TextView
+            android:id="@+id/labelTxPower"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tx_power"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/valueTxPower"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_toRightOf="@id/labelTxPower"
+            android:text="@string/non_applicable"
+            android:textSize="30sp"/>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+Copyright (c) 2014 Laird Technologies. All Rights Reserved.
+  
+The information contained herein is property of Laird Technologies.
+Licensees are granted free, non-transferable use of the information. NO WARRANTY of ANY KIND is provided. 
+This heading must NOT be removed from the file.
+-->
+
+<!-- Device details container-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/containerDeviceDetails"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/border" >
+
+	<TextView
+	    android:id="@+id/labelName"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentLeft="true"
+	    android:layout_alignParentTop="true"
+	    android:text="@string/name"
+	    android:textStyle="bold" />
+
+	<TextView
+	    android:id="@+id/valueDeviceName"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignBaseline="@id/labelName"
+	    android:layout_alignLeft="@+id/valueBattery"
+	    android:layout_toRightOf="@id/labelName"
+	    android:paddingLeft="5dp"
+	    android:text="@string/non_applicable" />
+	
+	<TextView
+	    android:id="@+id/labelRSSI"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@id/labelName"
+	    android:text="@string/RSSI" 
+	    android:textStyle="bold"/>
+
+	<TextView
+	    android:id="@+id/valueDeviceRssi"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignBaseline="@id/labelRSSI"
+	    android:layout_alignLeft="@+id/valueBattery"
+	    android:layout_below="@id/labelName"
+	    android:paddingLeft="5dp"
+	    android:text="@string/non_applicable" />
+	
+	<TextView
+	    android:id="@+id/labelBattery"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@id/labelRSSI"
+	    android:text="@string/battery"
+	    android:textStyle="bold" />
+	
+	<TextView
+	    android:id="@+id/valueBattery"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignBaseline="@id/labelBattery"
+	    android:layout_below="@id/labelRSSI"
+	    android:layout_toRightOf="@id/labelBattery"
+	    android:paddingLeft="5dp"
+	    android:text="@string/non_applicable" />
+	
+</RelativeLayout>

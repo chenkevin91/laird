@@ -1,0 +1,12 @@
+<!--
+Copyright (c) 2014 Laird Technologies. All Rights Reserved.
+  
+The information contained herein is property of Laird Technologies.
+Licensees are granted free, non-transferable use of the information. NO WARRANTY of ANY KIND is provided. 
+This heading must NOT be removed from the file.
+-->
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >    
+    <item android:id="@+id/action_scanning_indicator" android:orderInCategory="1" android:showAsAction="always"></item>
+    <item android:id="@+id/action_about" android:title="@string/action_about" android:orderInCategory="2" android:showAsAction="never"></item>
+    <item android:id="@+id/action_settings" android:title="@string/action_settings" android:orderInCategory="3" android:showAsAction="never"></item>
+</menu>

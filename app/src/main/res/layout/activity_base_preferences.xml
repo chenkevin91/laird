@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+Copyright (c) 2014 Laird Technologies. All Rights Reserved.
+  
+The information contained herein is property of Laird Technologies.
+Licensees are granted free, non-transferable use of the information. NO WARRANTY of ANY KIND is provided. 
+This heading must NOT be removed from the file.
+-->
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory android:title="@string/pref_general" >
+
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="pref_run_in_background"
+            android:summary="Keep running in the background"
+            android:title="@string/pref_run_in_background" />
+
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="pref_periodical_scan"
+            android:summary="Do a periodical scan"
+            android:title="@string/pref_periodical_scan" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/pref_serial" >
+
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="pref_clear_text_after_sending"
+            android:summary="Clear text once sent"
+            android:title="@string/pref_clear_text_after_sending" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/pref_OTA" >
+
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="pref_reset_module_after_sending"
+            android:summary="Reset module once file is uploaded"
+            android:title="@string/pref_reset_module_after_sending" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

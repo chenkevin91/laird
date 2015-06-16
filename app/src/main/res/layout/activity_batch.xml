@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+Copyright (c) 2014 Laird Technologies. All Rights Reserved.
+  
+The information contained herein is property of Laird Technologies.
+Licensees are granted free, non-transferable use of the information. NO WARRANTY of ANY KIND is provided. 
+This heading must NOT be removed from the file.
+-->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/customParentLayout"
+    android:background="#E8E8E8"
+    android:orientation="vertical" >
+
+    <!-- button select -->
+
+    <Button
+        android:id="@+id/btnFileSelect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/blue_button"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="@string/btn_batch_select" />
+
+    <LinearLayout
+        android:id="@+id/containerBtnsSendStop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnFileSelect"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal" >
+
+        <!-- button send -->
+
+        <Button
+            android:id="@+id/btnFileSend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/blue_button"
+            android:enabled="false"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="@string/btn_send"
+            tools:ignore="ButtonStyle" />
+
+        <!-- button stop -->
+
+        <Button
+            android:id="@+id/btnFileStopSending"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/blue_button"
+            android:enabled="false"
+        	android:layout_marginLeft="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="@string/btn_stop"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/containerDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/containerBtnsSendStop" >
+
+        <!-- file name -->
+
+        <LinearLayout
+            android:id="@+id/containerFileName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/labelFileNameTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+                android:text="@string/label_filename_tv"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/valueFileNameTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+                android:textColor="#009933" />
+        </LinearLayout>
+
+        <!-- status -->
+
+        <LinearLayout
+            android:id="@+id/containerStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/containerFileName" >
+
+            <TextView
+                android:id="@+id/labelStatusTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+                android:text="@string/label_status_tv"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/valueStatusTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <!-- valid device -->
+
+        <LinearLayout
+            android:id="@+id/containerValidDevice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/containerStatus" >
+
+            <TextView
+                android:id="@+id/labelValidDeviceTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_valid_device_tv"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/valueValidDeviceTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <!-- errors -->
+
+        <LinearLayout
+            android:id="@+id/containerErrors"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/containerValidDevice" >
+
+            <TextView
+                android:id="@+id/labelErrorsTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_errors_tv"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/valueErrorsTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!-- progress bar -->
+
+    <RelativeLayout
+        android:id="@+id/containerProgressbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/containerDetails">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:indeterminate="false"
+            android:max="0"
+            android:minHeight="17dp"
+            android:minWidth="200dp"
+            android:progress="0"
+            android:progressDrawable="@drawable/progressbar_horizontal" />
+
+        <TextView
+            android:id="@+id/progressBarProgressTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:textColor="#FFFFFF" />
+    </RelativeLayout>
+
+    <!-- button connect -->
+
+        <include
+        android:id="@+id/includeButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        layout="@layout/item_scan_button" />
+
+
+    <TextView
+        android:id="@+id/labelDataSendTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/containerProgressbar"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold" />
+
+    <ScrollView
+        android:id="@+id/scrollViewDataSend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/includeButton"
+        android:layout_below="@id/labelDataSendTv"
+        android:background="@drawable/border" >
+
+        <!-- data that was just send -->
+
+        <TextView
+            android:id="@+id/valueDataSendTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:textIsSelectable="true"
+            android:textSize="16sp" />
+    </ScrollView>
+
+</RelativeLayout>

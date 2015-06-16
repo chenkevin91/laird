@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+Copyright (c) 2014 Laird Technologies. All Rights Reserved.
+  
+The information contained herein is property of Laird Technologies.
+Licensees are granted free, non-transferable use of the information. NO WARRANTY of ANY KIND is provided. 
+This heading must NOT be removed from the file.
+-->
+
+<PreferenceScreen
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory>
+        
+        <CheckBoxPreference
+                android:key="pref_clear_text_after_sending"
+                android:title="@string/pref_clear_text_after_sending"
+                android:summary="Clear text once sent"
+                android:defaultValue="false"/>
+
+    </PreferenceCategory>
+    
+</PreferenceScreen>

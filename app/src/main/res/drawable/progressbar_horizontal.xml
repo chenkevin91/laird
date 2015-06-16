@@ -1,0 +1,31 @@
+<!--
+Copyright (c) 2014 Laird Technologies. All Rights Reserved.
+  
+The information contained herein is property of Laird Technologies.
+Licensees are granted free, non-transferable use of the information. NO WARRANTY of ANY KIND is provided. 
+This heading must NOT be removed from the file.
+-->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+  <item android:id="@android:id/background">
+    <shape>
+      <corners android:radius="5dip" />
+      <gradient
+        android:angle="270"
+        android:centerColor="#ff5a5d5a"
+        android:centerY="0.5"
+        android:endColor="#ff747674"
+        android:startColor="#ff9d9e9d" />
+    </shape>
+  </item>
+  <item android:id="@android:id/progress">
+    <clip>
+      <shape>
+        <corners android:radius="5dip" />
+          <gradient
+            android:angle="0"
+            android:endColor="#00a0df"
+            android:startColor="#00a0df" />
+      </shape>
+    </clip>
+  </item>
+</layer-list>
