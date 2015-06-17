@@ -119,7 +119,8 @@ This heading must NOT be removed from the file.
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:hint="Enter Vehicle IMEI"
+            android:hint="Enter Vehicle IMEI (15 digits)"
+            android:maxLength="15"
             android:inputType="number" />
 
         <EditText

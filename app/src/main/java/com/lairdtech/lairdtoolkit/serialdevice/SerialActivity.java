@@ -135,14 +135,14 @@ public class SerialActivity extends BaseActivity implements SerialManagerUiCallb
 
 				String imeiString = imeiInput.getText().toString();
 				String zipcardString = zipcardInput.getText().toString();
-				String resStart = Integer.toString(resStartDateInput.getMonth()) + "/" +
+				String resStart = Integer.toString(resStartDateInput.getMonth()+1) + "/" +
 						Integer.toString(resStartDateInput.getDayOfMonth()) + "/" +
-						Integer.toString(resStartDateInput.getYear()) + "/" +
+						Integer.toString(resStartDateInput.getYear()) + " " +
 						Integer.toString(resStartTimeInput.getCurrentHour()) + ":" +
 						Integer.toString(resStartTimeInput.getCurrentMinute());
-				String resEnd = Integer.toString(resEndDateInput.getMonth()) + "/" +
+				String resEnd = Integer.toString(resEndDateInput.getMonth()+1) + "/" +
 						Integer.toString(resEndDateInput.getDayOfMonth()) + "/" +
-						Integer.toString(resEndDateInput.getYear()) + "/" +
+						Integer.toString(resEndDateInput.getYear()) + " " +
 						Integer.toString(resEndTimeInput.getCurrentHour()) + ":" +
 						Integer.toString(resEndTimeInput.getCurrentMinute());
 				String lockOp = "";
