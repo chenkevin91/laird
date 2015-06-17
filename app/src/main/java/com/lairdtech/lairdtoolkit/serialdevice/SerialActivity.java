@@ -23,7 +23,7 @@ import android.widget.ScrollView;
 import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.TimePicker;
-import android.widget.ToggleButton;
+
 
 import com.lairdtech.lairdtoolkit.R;
 import com.lairdtech.lairdtoolkit.bases.BaseActivity;
@@ -45,13 +45,13 @@ public class SerialActivity extends BaseActivity implements SerialManagerUiCallb
 
 	private EditText imeiInput;
 	private EditText zipcardInput;
+	private TextView resStartLabel;
 	private DatePicker resStartDateInput;
 	private TimePicker resStartTimeInput;
+	private TextView resEndLabel;
 	private DatePicker resEndDateInput;
 	private TimePicker resEndTimeInput;
 	private Switch lockOpToggle;
-
-
 
 	@Override
 	protected void onCreate(final Bundle savedInstanceState) {
@@ -63,15 +63,7 @@ public class SerialActivity extends BaseActivity implements SerialManagerUiCallb
 
 		initialiseDialogAbout(getResources().getString(R.string.about_serial));
 		initialiseDialogFoundDevices("VSP");
-
-		imeiInput = (EditText) findViewById(R.id.imeiInput_view);
-		zipcardInput = (EditText) findViewById(R.id.zipcardInput_view);
-		resStartDateInput = (DatePicker) findViewById(R.id.resStartDateInput_view);
-		resStartTimeInput = (TimePicker) findViewById(R.id.resStartTimeInput_view);
-		resEndDateInput = (DatePicker) findViewById(R.id.resEndDateInput_view);
-		resEndTimeInput = (TimePicker) findViewById(R.id.resEndTimeInput_view);
-		lockOpToggle = (Switch) findViewById(R.id.lockOpToggle_switch);
-
+		mBtnSend.setEnabled(true);
 	}
 
 
@@ -89,6 +81,16 @@ public class SerialActivity extends BaseActivity implements SerialManagerUiCallb
 		mValueVspOutTv = (TextView) findViewById(R.id.valueVspOutTv);
 		mValueRxCounterTv = (TextView) findViewById(R.id.valueRxCounterTv);
 		mValueTxCounterTv = (TextView) findViewById(R.id.valueTxCounterTv);
+
+		imeiInput = (EditText) findViewById(R.id.imeiInput_view);
+		zipcardInput = (EditText) findViewById(R.id.zipcardInput_view);
+		resStartLabel = (TextView) findViewById(R.id.resStartLabel_view);
+		resStartDateInput = (DatePicker) findViewById(R.id.resStartDateInput_view);
+		resStartTimeInput = (TimePicker) findViewById(R.id.resStartTimeInput_view);
+		resEndLabel = (TextView) findViewById(R.id.resEndLabel_view);
+		resEndDateInput = (DatePicker) findViewById(R.id.resEndDateInput_view);
+		resEndTimeInput = (TimePicker) findViewById(R.id.resEndTimeInput_view);
+		lockOpToggle = (Switch) findViewById(R.id.lockOpToggle_switch);
 	}
 
 	@Override
@@ -105,30 +107,58 @@ public class SerialActivity extends BaseActivity implements SerialManagerUiCallb
 				 * to send data to module
 				 * *********************
 				 */
-				String data = mValueVspInputEt.getText().toString();
-				if(data != null){
-					mBtnSend.setEnabled(false);
-					if(mValueVspOutTv.getText().length() <= 0){
-						mValueVspOutTv.append(">");
-					} else{
-						mValueVspOutTv.append("\n\n>");
-					}
+//				String data = mValueVspInputEt.getText().toString();
+//				if(data != null){
+//					mBtnSend.setEnabled(false);
+//					if(mValueVspOutTv.getText().length() <= 0){
+//						mValueVspOutTv.append(">");
+//					} else{
+//						mValueVspOutTv.append("\n\n>");
+//					}
+//
+//					mSerialManager.startDataTransfer(data + "\r");
+//
+//					InputMethodManager inputManager = (InputMethodManager)
+//							getSystemService(Context.INPUT_METHOD_SERVICE);
+//
+//					inputManager.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(),
+//							InputMethodManager.HIDE_NOT_ALWAYS);
+//
+//					if(isPrefClearTextAfterSending == true){
+//						mValueVspInputEt.setText("");
+//					} else{
+//						// do not clear the text from the editText
+//					}
+//
+//				}
 
-					mSerialManager.startDataTransfer(data + "\r");
 
-					InputMethodManager inputManager = (InputMethodManager)
-							getSystemService(Context.INPUT_METHOD_SERVICE); 
+				String imeiString = imeiInput.getText().toString();
+				String zipcardString = zipcardInput.getText().toString();
+				String resStart = Integer.toString(resStartDateInput.getMonth()) + "/" +
+						Integer.toString(resStartDateInput.getDayOfMonth()) + "/" +
+						Integer.toString(resStartDateInput.getYear()) + "/" +
+						Integer.toString(resStartTimeInput.getCurrentHour()) + ":" +
+						Integer.toString(resStartTimeInput.getCurrentMinute());
+				String resEnd = Integer.toString(resEndDateInput.getMonth()) + "/" +
+						Integer.toString(resEndDateInput.getDayOfMonth()) + "/" +
+						Integer.toString(resEndDateInput.getYear()) + "/" +
+						Integer.toString(resEndTimeInput.getCurrentHour()) + ":" +
+						Integer.toString(resEndTimeInput.getCurrentMinute());
+				String lockOp = "";
+				if(lockOpToggle.isChecked())
+					lockOp = lockOpToggle.getTextOn().toString();
+				else
+					lockOp = lockOpToggle.getTextOff().toString();
 
-					inputManager.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(),
-							InputMethodManager.HIDE_NOT_ALWAYS);
-
-					if(isPrefClearTextAfterSending == true){
-						mValueVspInputEt.setText("");
-					} else{
-						// do not clear the text from the editText
-					}
-
+				String zipData = "IMEI: " + imeiString + ", ZIPCARD: " + zipcardString +
+						", START: " + resStart + ", END: " + resEnd + ", OP: " + lockOp;
+				if(zipData != null){
+					mValueVspOutTv.append(zipData);
+				} else {
+					mValueVspOutTv.append("");
 				}
+
 			}
 		});
 	}
@@ -308,6 +338,4 @@ public class SerialActivity extends BaseActivity implements SerialManagerUiCallb
 		super.loadPref();
 		isPrefClearTextAfterSending = mSharedPreferences.getBoolean("pref_clear_text_after_sending", false);
 	}
-
-
 }

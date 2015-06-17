@@ -159,7 +159,7 @@ public class ThermometerActivity extends BaseActivity implements ThermometerActi
 		runOnUiThread(new Runnable() {
 			@Override
 			public void run() {
-				mValueTemperature.setText(result + " °C");
+				mValueTemperature.setText(result + " C");
 				mGraph.addNewData(Double.parseDouble(result));
 			}
 		});

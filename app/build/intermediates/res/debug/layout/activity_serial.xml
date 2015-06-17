@@ -118,6 +118,7 @@ This heading must NOT be removed from the file.
             android:id="@+id/imeiInput_view"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
             android:hint="Enter Vehicle IMEI"
             android:inputType="number" />
 
@@ -125,6 +126,7 @@ This heading must NOT be removed from the file.
             android:id="@+id/zipcardInput_view"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
             android:hint="Enter Zipcard"
             android:inputType="number" />
 
@@ -133,13 +135,21 @@ This heading must NOT be removed from the file.
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
+            android:layout_marginLeft="30dp"
             android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/resStartLabel_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Reservation Start"
+                android:textSize="20sp" />
 
             <DatePicker
                 android:id="@+id/resStartDateInput_view"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:calendarViewShown="false"/>
+                android:calendarViewShown="false" />
 
             <TimePicker
                 android:id="@+id/resStartTimeInput_view"
@@ -153,7 +163,15 @@ This heading must NOT be removed from the file.
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
+            android:layout_marginLeft="30dp"
             android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/resEndLabel_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Reservation End"
+                android:textSize="20sp" />
 
             <DatePicker
                 android:id="@+id/resEndDateInput_view"
